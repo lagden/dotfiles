@@ -1,7 +1,9 @@
 # Make vim the default editor
 export EDITOR="vim"
+
 # Don’t clear the screen after quitting a manual page
 export MANPAGER="less -X"
+
 # Highlight section titles in manual pages
 export LESS_TERMCAP_md="$ORANGE"
 
@@ -9,5 +11,15 @@ export LESS_TERMCAP_md="$ORANGE"
 export HISTSIZE=32768
 export HISTFILESIZE=$HISTSIZE
 export HISTCONTROL=ignoredups
+
 # Make some commands not show up in history
 export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
+
+# Colors
+export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
+export CLICOLOR=1
+export LSCOLORS=caFxCxDxBxegedabagacad
+
+# Flex SDK
+PATH=$PATH:/usr/local/Cellar/flex_sdk/4.6.0.23201/libexec/bin
+export FLEX_HOME=/usr/local/Cellar/flex_sdk/4.6.0.23201/libexec
