@@ -15,11 +15,3 @@ export HISTCONTROL=ignoredups
 # Make some commands not show up in history
 export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
 
-# Colors
-export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
-export CLICOLOR=1
-export LSCOLORS=caFxCxDxBxegedabagacad
-
-# Flex SDK
-PATH=$PATH:/usr/local/Cellar/flex_sdk/4.6.0.23201/libexec/bin
-export FLEX_HOME=/usr/local/Cellar/flex_sdk/4.6.0.23201/libexec
