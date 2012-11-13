@@ -33,7 +33,10 @@ alias zun='tar -xzvf $1' #extract a tarball
 
 # Find in history | Requires one input 
 alias h="history"
-alias fh='history | grep $1'
+alias fh="history | grep $1"
+
+# find in proccess | Requires one input
+alias psf="ps auxw | grep $1"
 
 # List all files colorized in long format
 alias l="ls -l ${colorflag}"
