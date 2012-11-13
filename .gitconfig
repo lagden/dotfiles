@@ -13,6 +13,8 @@
 	c = clone --recursive
 	# Commit all changes
 	ca = !git add -A && git commit -av
+	# Commit all with custom msg
+	cam = "!sh -c 'git add -A && git commit -vm \"$1\"' -"
 	# Switch to a branch, creating it if necessary
 	go = checkout -B
 	# Show verbose output about tags, branches or remotes
