@@ -38,6 +38,10 @@ alias fh="history | grep $1"
 # find in proccess | Requires one input
 alias psf="ps auxw | grep $1"
 
+# curl ajax - use jq to help: https://github.com/stedolan/jq
+# usage: cjax 'http://search.twitter.com/search.json?q=json&rpp=5&include_entities=true' | jq '.results[0]'
+alias cjax="curl --header 'X-Requested-With: XMLHttpRequest' $1"
+
 # List all files colorized in long format
 alias l="ls -l ${colorflag}"
 
