@@ -13,5 +13,4 @@ export HISTFILESIZE=$HISTSIZE
 export HISTCONTROL=ignoredups
 
 # Make some commands not show up in history
-export HISTIGNORE="ls:cd:cd:fh -:pwd:exit:date:* --help"
-
+export HISTIGNORE="ls:cd:cd -:fh:psf:pwd:exit:date:* --help"
