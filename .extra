@@ -1,0 +1,30 @@
+# Colors
+export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
+export CLICOLOR=1
+export LSCOLORS=caFxCxDxBxegedabagacad
+
+# Git credentials
+# Not in the repository, to prevent people from accidentally committing under my name
+if [[ -r ~/.gitconfig ]]; then
+    GIT_AUTHOR_NAME="Thiago Lagden"
+    GIT_AUTHOR_EMAIL="lagden@gmail.com"
+    GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
+    GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
+
+    lockfile git.lock
+
+    git config --global user.name "$GIT_AUTHOR_NAME"
+    git config --global user.email "$GIT_AUTHOR_EMAIL"
+
+    # Diff Merge Images (base64)
+    git config --global merge.tool opendiff
+
+    rm -f git.lock
+fi
+
+# Flex SDK
+PATH=$PATH:/usr/local/Cellar/flex_sdk/4.6.0.23201/libexec/bin
+export FLEX_HOME=/usr/local/Cellar/flex_sdk/4.6.0.23201/libexec
+
+# MySQL
+PATH=$PATH:/usr/local/mysql/bin
