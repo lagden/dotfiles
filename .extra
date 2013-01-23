@@ -7,11 +7,11 @@ export LSCOLORS=caFxCxDxBxegedabagacad
 # Not in the repository, to prevent people from accidentally committing under my name
 if [[ -r ~/.gitconfig ]]; then
     GIT_AUTHOR_NAME="Thiago Lagden"
-    GIT_AUTHOR_EMAIL="lagden@gmail.com"
     GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
+    GIT_AUTHOR_EMAIL="lagden@gmail.com"
     GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
 
-    lockfile git.lock
+    lockfile -r 0 /tmp/git.lock || exit 0
 
     git config --global user.name "$GIT_AUTHOR_NAME"
     git config --global user.email "$GIT_AUTHOR_EMAIL"
@@ -19,7 +19,7 @@ if [[ -r ~/.gitconfig ]]; then
     # Diff Merge Images (base64)
     git config --global merge.tool opendiff
 
-    rm -f git.lock
+    rm -f /tmp/git.lock
 fi
 
 # Flex SDK
