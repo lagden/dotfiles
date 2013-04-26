@@ -1,3 +1,7 @@
+# Personal
+.path
+.extra
+
 # Compiled Python files
 *.pyc
 
