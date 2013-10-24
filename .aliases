@@ -33,10 +33,12 @@ alias zun='tar -xzvf $1' #extract a tarball
 
 # Find in history | Requires one input 
 alias h="history"
-alias fh="history | grep $1"
+# alias fh="history | grep $1"
+alias fh="history | ack --ignore-case $1"
 
-# find in proccess | Requires one input
-alias psf="ps auxw | grep $1"
+# Find in proccess | Requires one input
+# alias psf="ps auxw | grep $1"
+alias psf="ps auxw | ack --ignore-case $1"
 
 # curl ajax - use jq to help: https://github.com/stedolan/jq
 # usage: cjax 'http://search.twitter.com/search.json?q=json&rpp=5&include_entities=true' | jq '.results[0]'
