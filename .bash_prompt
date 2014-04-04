@@ -9,5 +9,8 @@ source /usr/local/git/contrib/completion/git-prompt.sh
 BASHCOMPLETION="$(brew --prefix)/etc/bash_completion"
 [[ -s $BASHCOMPLETION ]] && . $BASHCOMPLETION
 
-export PS1='\[\033[32m\]\u@♠\[\033[34m\] \w\[\033[33m\]$(__git_ps1)\[\033[34m\]\n\$\[\033[00m\] '
+icons=("☁" "☃" "♻" "♫" "☢" "☯" "☺" "♠" "♣" "♥" "♦" "★" "☂" "☀")
+rand=$[ $RANDOM % ${#icons[*]} ]
+
+export PS1='\[\033[32m\]\u@${icons[$rand]}\[\033[34m\] \w\[\033[33m\]$(__git_ps1)\[\033[34m\]\n\$\[\033[00m\] '
 export PS2='\[\033[33m\]→ \[\033[00m\]'
