@@ -63,6 +63,9 @@ alias sudo='sudo '
 # Gzip-enabled `curl`
 alias gurl="curl --compressed"
 
+# Recursively fix permission files and Folders
+alias fixpermission="find ./ -type d -print0 |xargs -0 chmod 755 && find ./ -type f -print0 |xargs -0 chmod 644"
+
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
 alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm update npm -g; npm update -g; sudo gem update'
 
